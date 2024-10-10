@@ -16,21 +16,21 @@ Dividete in piccoli problemi la consegna.
 Individuate gli elementi di cui avete bisogno per realizzare il programma.
 Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali e quanti numeri ci sono in comune tra i due array"
 */
-
-
+const progressTime = document.getElementById('timer')
+const numberContainer = document.getElementById("casual-number")
+const secondsEl = 30;
+const numbers = []
 //creazione numeri randomici
-function randomicNumber (){
-    const randomNumberEl = Math.floor((Math.random() * 10) + 1);
-    const randomNumberEl2 = Math.floor((Math.random() * 10) + 1);
-    const randomNumberEl3 = Math.floor((Math.random() * 10) + 1);
-    const randomNumberEl4 = Math.floor((Math.random() * 10) + 1);
-    const randomNumberEl5 = Math.floor((Math.random() * 10) + 1);
-    document.getElementById('casual-number').innerHTML = randomNumberEl;
-    document.getElementById('casual-number-2').innerHTML = randomNumberEl2;
-    document.getElementById('casual-number-3').innerHTML = randomNumberEl3;
-    document.getElementById('casual-number-4').innerHTML = randomNumberEl4;
-    document.getElementById('casual-number-5').innerHTML = randomNumberEl5;
-
+function generateRandomNumber() {
+    let numbers = [];
+    for (let i = 0; i < 5; i++) { 
+        numbers.push(Math.floor(Math.random()*100)+1);        
+    }
+    
+    numberContainer.innerHTML = numbers
+    console.log(numbers);
 }
+generateRandomNumber()
+//come far sparire i numeri dopo 30 secondi?e mettere gli input
 
-randomicNumber()
+
