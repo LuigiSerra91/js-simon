@@ -20,7 +20,7 @@ const progressTime = document.getElementById('timer')
 const numberContainer = document.getElementById("casual-number")
 const secondsEl = 30;
 const numbers = []
-const inputFormEl = document.querySelector('.inputForm')
+const inputFormEl = document.getElementById('inputForm')
 //creazione numeri randomici
 function generateRandomNumber() {
     let numbers = [];
@@ -45,8 +45,9 @@ function countdown(start) {
         progressTime.innerHTML = count
         if (count <= 0) {
             clearInterval(interval);
-            inputFormEl.classList.add('d-none');
+            
             numberContainer.classList.add('d-none');
+            inputFormEl.classList.remove('d-none');
             progressTime.innerHTML = 'finito il tempo'
         }
     }, 1000); // Intervallo di 1000 millisecondi (1 secondo)
