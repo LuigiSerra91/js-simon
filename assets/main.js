@@ -34,3 +34,20 @@ generateRandomNumber()
 //come far sparire i numeri dopo 30 secondi?e mettere gli input
 
 
+function countdown(start) {
+    let count = start;
+    const display = progressTime
+    const interval = setInterval(() => {
+        console.log(count);
+        count--;
+
+        if (count < 0) {
+            clearInterval(interval);
+            progressTime.innerHTML = start
+            console.log("Countdown terminato!");
+        }
+    }, 1000); // Intervallo di 1000 millisecondi (1 secondo)
+}
+
+// Chiamata alla funzione con il valore di partenza 30
+countdown(30,);
