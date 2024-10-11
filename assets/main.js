@@ -54,4 +54,5 @@ function countdown(start) {
 }
 
 // Chiamata alla funzione con il valore di partenza 30
-countdown(30,);
+countdown(30,); 
+
