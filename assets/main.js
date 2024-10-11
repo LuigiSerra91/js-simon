@@ -19,7 +19,7 @@ Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali
 const progressTime = document.getElementById('timer')
 const numberContainer = document.getElementById("casual-number")
 const secondsEl = 30;
-const numbers = []
+
 const inputFormEl = document.getElementById('inputForm')
 //creazione numeri randomici
 function generateRandomNumber() {
